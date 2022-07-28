@@ -1220,7 +1220,7 @@ const gn = "modulepreload", mn = function (e) {
             })
         })).then(() => t())
     }, pn = ne("<div><h1>NM</h1></div>"), He = () => (console.log("render homepage"), pn.cloneNode(!0)),
-    wn = vt(() => yn(() => import("./Day.33cd422b.js"), ["https://iceleiyu.github.io/WebClub/Public/assets/Day.33cd422b.js", "https://iceleiyu.github.io/WebClub/Public/assets/Day.ea7f26f5.css"])),
+    wn = vt(() => yn(() => import("https://iceleiyu.github.io/WebClub/Public/assets/Day.33cd422b.js"), ["https://iceleiyu.github.io/WebClub/Public/assets/Day.33cd422b.js", "https://iceleiyu.github.io/WebClub/Public/assets/Day.ea7f26f5.css"])),
     bn = () => A(fn, {
         get children() {
             return [A(ye, {path: "/", component: He}), A(ye, {
