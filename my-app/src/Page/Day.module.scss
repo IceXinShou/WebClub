@@ -1,0 +1,97 @@
+.day {
+    color: darkgray;
+    height: 100%;
+    padding: 5px;
+    font-size: 25px;
+}
+
+.day rgb,
+.day red,
+.day yel,
+.day blu,
+.day gra,
+.day bla {
+    margin: 0 5px;
+    display: block;
+}
+
+.date {
+    color: darkgray;
+    font-size: 20px;
+    float: right;
+}
+
+h1 {
+    color: white;
+    font-size: 40px;
+    margin: 0 5px;
+    border-bottom: solid 2px gray;
+}
+
+h2 {
+    color: white;
+    font-size: 30px;
+    margin: 0 5px;
+}
+
+h3 {
+    color: white;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+dot, cir, squ, dec, rom {
+    margin-left: 30px;
+    display: list-item;
+    list-style-position: outside;
+}
+
+dot {
+    list-style-type: disc;
+}
+
+cir {
+    list-style-type: circle;
+}
+
+squ {
+    list-style-type: square;
+}
+
+dec {
+    list-style-type: decimal;
+}
+
+rom {
+    list-style-type: upper-roman;
+}
+
+tab {
+    margin-left: 1em;
+    display: block;
+}
+
+hr {
+    border-color: gray;
+    margin: 5px;
+}
+
+red {
+    color: red;
+}
+
+yel {
+    color: yellow;
+}
+
+blu {
+    color: blue;
+}
+
+gra {
+    color: gray;
+}
+
+bla {
+    color: black;
+}

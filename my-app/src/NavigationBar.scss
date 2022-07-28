@@ -1,0 +1,119 @@
+:root {
+    --headerMinHeight: 40px;
+    --headerMaxHeight: 70px;
+    --headerHeight: 70px;
+}
+
+/*NavigationBar*/
+.NavBar {
+    background: #2F3136;
+    width: 100%;
+    height: var(--headerHeight);
+    position: fixed;
+    top: 0;
+    transition: 0.1s linear;
+    //overflow: hidden;
+
+    .NavListIcon {
+        height: var(--headerHeight);
+        margin-right: 10px;
+        float: right;
+        cursor: pointer;
+        transition: 0.1s linear;
+        position: relative;
+        display: none;
+
+        img {
+            height: 35px;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto;
+        }
+    }
+
+    /*NavigationBar Home button*/
+    .HomeButton {
+        width: 150px;
+        float: left;
+
+        .title {
+            color: white;
+            font-size: 25px;
+            line-height: var(--headerHeight);
+            padding-right: 10px;
+            float: right;
+            transition: 0.1s linear;
+        }
+
+        .icon {
+            width: var(--headerHeight);
+            height: 70%;
+            margin-left: 10px;
+            float: left;
+
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    /*NavigationBar Link button*/
+    nav {
+        .HeaderButton:hover {
+            background: #424242;
+        }
+
+        .HeaderButton {
+            color: white;
+            width: 100px;
+            height: 100%;
+            font-size: 20px;
+            line-height: var(--headerHeight);
+            text-align: center;
+            text-decoration: none;
+            border-left: dimgray solid 1px;
+            display: block;
+            float: left;
+            transition: 0.1s linear;
+        }
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            display: block;
+        }
+    }
+}
+
+/*FullSize*/
+.NavBar.FullSizeHeader {
+    height: var(--headerMaxHeight);
+
+    .NavListIcon {
+        height: var(--headerMaxHeight);
+    }
+
+    nav .HeaderButton {
+        line-height: var(--headerMaxHeight);
+    }
+
+    .title {
+        line-height: var(--headerMaxHeight);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .NavBar {
+        .NavListIcon {
+            display: block;
+        }
+    }
+
+    .HeaderButton {
+        display: none !important;
+    }
+}
