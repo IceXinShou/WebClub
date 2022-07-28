@@ -13,15 +13,7 @@ export default defineConfig({
     },
     experimental: {
         renderBuiltUrl(filename, {hostType, type}) {
-            console.log("./Public/"+filename)
-            // if (type === 'public') {
-            //     return 'https://www.domain.com/' + filename
-            // } else if (path.extname(importer) === '.js') {
-            //     return {runtime: `window.__assetsPath(${JSON.stringify(filename)})`}
-            // } else {
-            //     return 'https://cdn.domain.com/assets/' + filename
-            // }
-            return './Public/' + filename;
+            return 'https://iceleiyu.github.io/WebClub/Public/' + filename;
         }
     },
 });
