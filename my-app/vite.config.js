@@ -13,14 +13,7 @@ export default defineConfig({
     },
     experimental: {
         renderBuiltUrl(filename, {hostType, type}) {
-            // console.log(filename, hostType,type)
-            if (!filename.startsWith('.')) {
-                console.log('https://iceleiyu.github.io/WebClub/Public/' + filename);
-                return 'https://iceleiyu.github.io/WebClub/Public/' + filename;
-            } else {
-                console.log(filename);
-                return filename;
-            }
+            return 'https://iceleiyu.github.io/WebClub/Public/' + filename;
         }
     },
 })
