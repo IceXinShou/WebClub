@@ -13,7 +13,10 @@ export default defineConfig({
     },
     experimental: {
         renderBuiltUrl(filename, {hostType, type}) {
-            return 'https://iceleiyu.github.io/WebClub/Public/' + filename;
+            if (!filename.startsWith('.'))
+                return 'https://iceleiyu.github.io/WebClub/Public/' + filename;
+            else
+                return filename;
         }
     },
 });
