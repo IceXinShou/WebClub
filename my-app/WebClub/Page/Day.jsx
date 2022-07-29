@@ -10,7 +10,7 @@ const day = () => {
 
     const [resource] = createResource(() => user.id, async i => {
             const document = new DOMParser().parseFromString(
-                await (await fetch(`/WebClub/Page/Data/${i}.html`)).text()
+                await (await fetch(`/WebClub/Page/data/${i}.html`)).text()
                 , 'text/html');
             // return [...document.head.children, ...document.body.children];
             return document.body.children;
