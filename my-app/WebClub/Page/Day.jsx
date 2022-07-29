@@ -1,14 +1,15 @@
-import {useRouteData, useParams} from 'solid-app-router';
-import {lazy, createResource, For, Show} from "solid-js";
+import {useParams} from 'solid-app-router';
+import {createResource, For} from "solid-js";
 
 import styles from './Day.module.scss';
-
+import './Day.scss';
 
 const day = () => {
     console.log('render day');
     const user = useParams();
 
     const [resource] = createResource(() => user.id, async i => {
+            // import(`/WebClub/Page/data/${i}.html`);
             const document = new DOMParser().parseFromString(
                 await (await fetch(`/WebClub/Page/data/${i}.html`)).text()
                 , 'text/html');

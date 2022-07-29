@@ -1,16 +1,17 @@
 import {defineConfig} from 'vite';
 import solidPlugin from 'vite-plugin-solid';
 import path from 'path';
-import * as fs from 'fs'
+import fs from 'fs';
 
 const projectName = 'WebClub';
 const outputRoot = 'docs';
 const dynamicImportFiles = [
-    './Page/data/1.html'
+    './Page/data'
 ];
 
 export default defineConfig({
     plugins: [solidPlugin(), buildParser(dynamicImportFiles)],
+    assetsInclude: './Page/data/*.html',
     server: {
         host: '0.0.0.0',
         port: 25567,
@@ -50,13 +51,12 @@ function buildParser(dynamicImportFiles) {
                     fs.readdirSync(src).forEach(function (childItemName) {
                         fs.copyFileSync(
                             path.join(src, childItemName),
-                            path.join(dest, childItemName),
-                            fs.constants.COPYFILE_FICLONE
+                            path.join(dest, childItemName)
                         );
                     });
                 } else {
                     fs.mkdirSync(path.dirname(dest), {recursive: true});
-                    fs.copyFileSync(src, dest, fs.constants.COPYFILE_FICLONE);
+                    fs.copyFileSync(src, dest);
                 }
             }
 

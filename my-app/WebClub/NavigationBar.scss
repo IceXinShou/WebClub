@@ -7,23 +7,24 @@
 /*NavigationBar*/
 .NavBar {
     background: #2F3136;
-    width: 100%;
+    width: 100vw;
     height: var(--headerHeight);
     position: fixed;
     top: 0;
     transition: 0.1s linear;
-    //overflow: hidden;
+    overflow: hidden;
 
     .NavListIcon {
         height: var(--headerHeight);
+        width: 35px;
         margin-right: 10px;
-        float: right;
-        cursor: pointer;
         transition: 0.1s linear;
-        position: relative;
         display: none;
+        right: 0;
+        position: absolute;
 
         img {
+            cursor: pointer;
             height: 35px;
             position: absolute;
             top: 0;

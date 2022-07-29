@@ -1,34 +1,155 @@
-
 .header {
+    display: flex;
     position: relative;
 
-    .day {
-        background: gray;
-        width: 150px;
-        height: 80px;
-        line-height: 80px;
-        font-size: 40px;
-        color: white;
-        margin: 20px 10px;
-        display: inline-block;
-        transform: rotate(-10deg);
-        border-radius: 20px;
-        text-align: center;
-    }
-
     .date {
+        color: darkgray;
+        font-size: 25px;
         position: absolute;
         right: 10px;
         top: 10px;
     }
 
-    h1 {
+    .day {
+        flex: 0 0 200px;
+        margin: 5px;
 
-        display: none;
-        position: absolute;
-        left: 200px;
-        bottom: 10px;
-        right: 0;
-        margin: auto;
+        div {
+            background: gray;
+            color: white;
+            width: 150px;
+            height: 80px;
+            font-size: 40px;
+            line-height: 80px;
+            text-align: center;
+            margin: 20px auto;
+            transform: rotate(-10deg);
+            border-radius: 20px;
+        }
+    }
+
+    .title {
+        flex: 1;
+        margin: 5px;
+        min-width: 400px;
+        align-self: flex-end;
+
+        h1 {
+            background-color: #323638;
+            border-radius: 20px;
+            padding: 5px 10px;
+            border: none;
+            white-space: nowrap;
+        }
     }
 }
+
+.body {
+    display: flex;
+    flex: 1;
+
+    .left {
+        background-color: #424242;
+        flex: 0 0 200px;
+        margin: 5px;
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 30px;
+
+        h3 {
+            cursor: pointer;
+        }
+
+        h3:hover {
+            color: cadetblue;
+        }
+    }
+
+    .right {
+        background-color: #323638;
+        flex: 1;
+        min-width: 400px;
+        margin: 5px;
+        padding: 5px;
+        box-sizing: border-box;
+        border-radius: 15px;
+    }
+}
+
+
+@media screen and (max-width: 800px) {
+    .header {
+        .day {
+            display: none;
+        }
+    }
+
+    .body {
+        .left {
+            display: none;
+        }
+    }
+}
+
+
+//
+//.header {
+//    position: relative;
+//
+//    .day {
+//        background: gray;
+//        width: 150px;
+//        height: 80px;
+//        line-height: 80px;
+//        font-size: 40px;
+//        color: white;
+//        margin: 20px 10px;
+//        display: inline-block;
+//        transform: rotate(-10deg);
+//        border-radius: 20px;
+//        text-align: center;
+//    }
+//
+//    .date {
+//        color: darkgray;
+//        font-size: 20px;
+//        position: absolute;
+//        right: 10px;
+//        top: 10px;
+//    }
+//
+//    h1 {
+//        border: none;
+//        background-color: #323638;
+//        border-radius: 20px;
+//        position: absolute;
+//        left: 200px;
+//        bottom: 10px;
+//        right: 0;
+//
+//        padding: 5px 10px;
+//        margin: auto;
+//    }
+//}
+//
+//.left {
+//    width: 170px;
+//    height: 100%;
+//    float: left;
+//    background-color: #424242;
+//    padding: 10px;
+//    border-radius: 30px;
+//    margin-left: 15px;
+//}
+//
+//.right {
+//    height: 100%;
+//    width: 100%;
+//    padding-left: 215px;
+//    box-sizing: border-box;
+//}
+//
+//.right > div {
+//    background-color: #323638;
+//    border-radius: 15px;
+//}
