@@ -95,3 +95,54 @@ gra {
 bla {
     color: black;
 }
+
+.header {
+    position: relative;
+
+    .day {
+        background: gray;
+        width: 150px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 40px;
+        color: white;
+        margin: 20px 10px;
+        display: inline-block;
+        transform: rotate(-10deg);
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .date {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    h1 {
+        display: none;
+        position: absolute;
+        left: 200px;
+        bottom: 10px;
+        right: 0;
+        margin: auto;
+    }
+}
+
+
+.left {
+    width: 170px;
+    height: 100%;
+    float: left;
+    background-color: #424242;
+    border-radius: 30px;
+    margin-left: 15px;
+}
+
+.right {
+    height: 100%;
+    width: 100%;
+    padding-left: 215px;
+    box-sizing: border-box;
+
+}

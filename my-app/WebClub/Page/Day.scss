@@ -1,0 +1,34 @@
+
+.header {
+    position: relative;
+
+    .day {
+        background: gray;
+        width: 150px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 40px;
+        color: white;
+        margin: 20px 10px;
+        display: inline-block;
+        transform: rotate(-10deg);
+        border-radius: 20px;
+        text-align: center;
+    }
+
+    .date {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+    }
+
+    h1 {
+
+        display: none;
+        position: absolute;
+        left: 200px;
+        bottom: 10px;
+        right: 0;
+        margin: auto;
+    }
+}
